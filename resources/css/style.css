@@ -1,0 +1,24 @@
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  header {
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  
+  footer {
+    margin-top: 50px;
+  }
+  .carousel-item img {
+    height: 500px; /* Ajusta la altura a tu preferencia */
+    object-fit: cover; /* Esto asegura que las imágenes se recorten adecuadamente para llenar el área disponible */
+  }
+  
