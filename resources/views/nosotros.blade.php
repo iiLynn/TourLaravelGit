@@ -155,15 +155,7 @@ footer h2 {
         </div>
     </section>
 
-    <footer>
-        <h2>Contacto</h2>
-        <p>Teléfono: +123 456 789 | Email: contacto@touroperadora.com</p>
-        <div class="social-icons">
-            <a href="#"><img src="/imagenes/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="/imagenes/twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="/imagenes/instagram-icon.png" alt="Instagram"></a>
-        </div>
-    </footer>
+   
 </body>
 
 @endsection

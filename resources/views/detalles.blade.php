@@ -194,8 +194,7 @@
         <div class="booking-info">
             <h3>Detalles del Tour</h3>
             <p><strong>Fecha de Inicio:</strong> {{ $tour->dia_inicio }}</p>
-<p><strong>Fecha de Fin:</strong> {{ $tour->dia_fin }}</p>
-
+            <p><strong>Fecha de Fin:</strong> {{ $tour->dia_fin }}</p>
             <p><strong>Duración:</strong> {{ $tour->duracion }} días</p>
             <p><strong>Departamento:</strong> {{ $tour->departamento }}</p>
             <p><strong>Lugar:</strong> {{ $tour->lugar }}</p>
@@ -204,10 +203,15 @@
                 <span class="old-price">${{ $tour->precio }}</span>
                 <span class="current-price">${{ $tour->precio }}</span>
             </div>
-            
+
             @auth
+                <!-- Formulario para agregar al carrito con campo de cantidad -->
                 <form action="{{ route('cart.add', $tour->id) }}" method="POST">
                     @csrf
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Cantidad de personas:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" class="form-control">
+                    </div>
                     <button type="submit" class="btn-primary">Agregar al carrito</button>
                 </form>
             @else

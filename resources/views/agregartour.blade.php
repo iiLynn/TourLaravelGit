@@ -56,6 +56,10 @@
                 <input type="number" name="precio" class="form-control" placeholder="Precio" required>
             </div>
             <div class="mb-3 form-group">
+                <label for="adultos" class="form-label">Adultos</label>
+                <input type="number" name="adultos" class="form-control" placeholder="Numeros de personas" required>
+            </div>
+            <div class="mb-3 form-group">
                 <label for="duracion" class="form-label">Duración (días)</label>
                 <input type="number" name="duracion" class="form-control" placeholder="Duración en días" min="1" required>
             </div>

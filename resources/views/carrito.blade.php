@@ -9,7 +9,7 @@
                 <tr>
                     <th>Tour</th>
                     <th>Precio</th>
-                    <th>Cantidad</th>
+                    <th>Cantidad de personas</th>
                     <th>Total</th>
                     <th>Acciones</th>
                 </tr>
@@ -17,16 +17,22 @@
             <tbody>
                 @php $total = 0; @endphp
                 @foreach(session('cart') as $id => $details)
-                    @php $total += $details['precio'] * $details['quantity']; @endphp
+                    @php 
+                        // Asegurarse de que 'precio' y 'quantity' existen
+                        $precio = $details['precio'] ?? 0;
+                        $quantity = $details['quantity'] ?? 1;
+                        $subtotal = $precio * $quantity;
+                    @endphp
                     <tr>
-                        <td>{{ $details['titulo'] }}</td>
-                        <td>${{ $details['precio'] }}</td>
-                        <td>{{ $details['quantity'] }}</td>
-                        <td>${{ $details['precio'] * $details['quantity'] }}</td>
+                        <td>{{ $details['titulo'] ?? 'Desconocido' }}</td>
+                        <td>${{ $precio }}</td>
+                        <td>{{ $quantity }}</td>
+                        <td>${{ $subtotal }}</td>
                         <td>
                             <a href="{{ route('cart.remove', $id) }}" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
+                    @php $total += $subtotal; @endphp
                 @endforeach
             </tbody>
         </table>

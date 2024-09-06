@@ -17,6 +17,7 @@ class Tour extends Model
         'precio',
         'duracion',   // Nuevo campo para duración
         'imagen',
+        'adultos', 
         'departamento',
         'lugar'
     ];
@@ -27,6 +28,7 @@ class Tour extends Model
         'dia_inicio' => 'required|date',
         'dia_fin' => 'required|date',
         'precio' => 'required|numeric',
+        'adultos' => 'required|numeric',
         'duracion' => 'required|numeric|min:1', // Validación para duración
         'imagen' => 'required|image|mimes:jpeg,png,jpg|max:2048',
     ];

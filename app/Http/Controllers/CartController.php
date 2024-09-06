@@ -8,31 +8,37 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public function addToCart($id)
+    public function addToCart(Request $request, $id)
     {
-        if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'Por favor, inicie sesión para agregar al carrito.');
+        $tour = Tour::find($id);
+    
+        if (!$tour) {
+            return redirect()->route('paquetes')->with('error', 'Tour no encontrado.');
         }
-
-        $tour = Tour::findOrFail($id);
-
+    
+        $quantity = $request->input('quantity', 1); // Obtener cantidad desde el formulario
+    
         $cart = session()->get('cart', []);
-
+    
         if (isset($cart[$id])) {
-            $cart[$id]['quantity']++;
+            // Si el tour ya está en el carrito, solo actualiza la cantidad
+            $cart[$id]['quantity'] += $quantity;
         } else {
+            // Si el tour no está en el carrito, agrégalo
             $cart[$id] = [
-                "titulo" => $tour->titulo,
-                "quantity" => 1,
-                "precio" => $tour->precio,
-                "imagen" => $tour->imagen
+                'titulo' => $tour->titulo,
+                'precio' => $tour->precio,
+                'quantity' => $quantity,
+                'imagen' => $tour->imagen,
             ];
         }
-
+    
         session()->put('cart', $cart);
-
-        return redirect()->back()->with('success', '¡Tour agregado al carrito!');
+    
+        return redirect()->route('carrito')->with('success', 'Tour agregado al carrito.');
     }
+    
+
 
     public function removeFromCart($id)
     {

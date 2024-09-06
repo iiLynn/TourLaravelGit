@@ -106,3 +106,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 route::post('/cart/add/{id}', [CartController::class, 'addToCart'])->middleware('auth')->name('cart.add');
 Route::post('/payment/process/monthly', [PaymentController::class, 'processMonthlyPayment'])->name('payment.process.monthly');
+//ruta busqueda
+
+route::post('/search-tours', [TourController::class, 'search'])->name('search-tours');

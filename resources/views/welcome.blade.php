@@ -53,10 +53,13 @@ main {
 
         /* Estilo del footer */
         footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px;
-        }
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
 
         footer p {
             margin: 0;
