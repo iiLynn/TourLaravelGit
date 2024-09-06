@@ -139,7 +139,7 @@
 
         <!-- Formulario flotante -->
         <div class="form-container" id="floatingForm">
-            <h3 class="text-center mb-4">Encuentra tu Tour</h3>
+                     <h3 class="text-center mb-4">Encuentra tu Tour</h3>
             <form>
                 <div class="mb-3">
                     <label for="from" class="form-label">Departamentos</label>

@@ -2,7 +2,8 @@
 
 @section('content')
 
-<style>* {
+<style>
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -86,21 +87,6 @@ header p {
     border-radius: 10px;
 }
 
-.full-service {
-    margin-top: 40px;
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.full-service ul {
-    list-style-type: none;
-}
-
-.full-service ul li {
-    margin-bottom: 10px;
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -121,63 +107,63 @@ footer h2 {
     width: 40px;
     height: 40px;
 }
-
-    </style>
+</style>
 
 <body>
     <header>
         <div class="header-image">
-            <img src="\imagenes\nosotros1.jpg" alt="Iglesia" class="hero-image">
+            <img src="/imagenes/nosotros1.jpg" alt="Iglesia" class="hero-image">
             <div class="header-text">
                 <h1>Sobre nosotros</h1>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Conectando destinos increíbles con experiencias inolvidables</p>
             </div>
         </div>
     </header>
 
     <section class="about-us">
-        <h2>Quienes Somos</h2>
-        <p>En Tour Operadora, nos especializamos en crear experiencias de viaje inolvidables, conectando a nuestros clientes con destinos increíbles. Con más de 10 años de experiencia, ofrecemos tours diseñados con pasión y atención al detalle, garantizando una experiencia única. Nuestro objetivo es que cada cliente disfrute de un viaje personalizado y adaptado a sus necesidades, creando recuerdos que duren toda la vida. Apostamos por la innovación, la sostenibilidad y el compromiso con la calidad en todos nuestros servicios.</p>
+        <h2>Quiénes Somos</h2>
+        <p>En Tour Operadora, nos especializamos en crear experiencias de viaje inolvidables, conectando a nuestros
+            clientes con destinos increíbles. Con más de 10 años de experiencia, ofrecemos tours diseñados con pasión y
+            atención al detalle, garantizando una experiencia única. Nuestro objetivo es que cada cliente disfrute de un
+            viaje personalizado y adaptado a sus necesidades, creando recuerdos que duren toda la vida. Apostamos por la
+            innovación, la sostenibilidad y el compromiso con la calidad en todos nuestros servicios.</p>
     </section>
 
     <section class="services">
         <h2>Qué hacemos</h2>
         <div class="services-container">
             <div class="service">
-                <h3>Diseño de muebles</h3>
-                <p>Sample text. Click to select the text box.</p>
+                <h3>Misión</h3>
+                <p>Proporcionar experiencias de viaje memorables que superen las expectativas de nuestros clientes,
+                    enfocándonos en la calidad, sostenibilidad y la personalización de cada tour.</p>
             </div>
             <div class="service">
-                <h3>Diseño de interiores</h3>
-                <p>Sample text. Click to select the text box.</p>
+                <h3>Visión</h3>
+                <p>Ser reconocidos como líderes en el turismo sostenible y la creación de experiencias únicas,
+                    expandiendo nuestros destinos a nivel global.</p>
             </div>
             <div class="service">
-                <h3>Puesta en escena de la casa</h3>
-                <p>Sample text. Click to select the text box.</p>
+                <h3>Valores</h3>
+                <p>Pasión por el servicio, compromiso con la sostenibilidad, innovación en cada recorrido y enfoque en
+                    la satisfacción del cliente.</p>
             </div>
             <div class="service">
-                <h3>Ejemplo de título</h3>
-                <p>Sample text. Click to select the text box.</p>
+                <h3>Servicios</h3>
+                <p>Ofrecemos tours personalizados, planificación de viajes grupales y paquetes turísticos especializados
+                    para diferentes destinos.</p>
             </div>
-        </div>
-        
-        <div class="full-service">
-            <h3>Ofertas de servicios completos:</h3>
-            <ul>
-                <li>Arquitectura de interiores y planificación del espacio</li>
-                <li>Diseño y decoración de interiores</li>
-                <li>Especificaciones de acabado y accesorios</li>
-                <li>Elevaciones y planos de construcción</li>
-                <li>Modelos 3D y visualizaciones fotorealistas</li>
-                <li>Muebles a medida</li>
-                <li>Selección y adquisición de muebles</li>
-            </ul>
         </div>
     </section>
 
-    
+    <footer>
+        <h2>Contacto</h2>
+        <p>Teléfono: +123 456 789 | Email: contacto@touroperadora.com</p>
+        <div class="social-icons">
+            <a href="#"><img src="/imagenes/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="/imagenes/twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="/imagenes/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
 </body>
-
-
 
 @endsection
